@@ -122,50 +122,9 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-#set cps_project environment variable
-CPS_ROOT=/CPS_Project
-export CPS_ROOT
-CPS_ENV=$CPS_ROOT/ubuntu
-export CPS_ENV
-JAVA_HOME=~/java_install/jdk1.7.0_45
-export JAVA_HOME
-JRE_HOME=~/java_install/jdk1.7.0_45/jre
-export JRE_HOME
-CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
-export CLASSPATH
-TOMCATPATH=~/java_install/apache-tomcat-7.0.47
-export TOMCATPATH
-#ACE_ROOT=/home/cps/ubuntu12.04_64bit_3rd/ACE_wrappers
-ACE_ROOT=/home/cps/CPS_Project/CPS/3rdPartyProgram/ACE
-export ACE_ROOT
-QTDIR=$CPS_ROOT/CPS/3rdPartyProgram/Qt
-export QTDIR
-PATH=$CPS_ENV/bin:$JAVA_HOME/bin:$JRE_HOME/bin:$TOMCATPATH/bin:$QTDIR/bin:/usr/X11R6/bin:/usr/local/mysql/bin:$PATH
-export PATH
-#LD_LIBRARY_PATH=$CPS_ENV/lib:$CPS_ENV/plugin/rules:$CPS_ENV/thirdpartylib:$QTDIR/lib:/usr/X11R6/lib:$LD_LIBRARY_PATH
-LD_LIBRARY_PATH=$CPS_ENV/lib:$CPS_ENV/plugin/rules:$CPS_ENV/thirdpartylib:$ACE_ROOT/lib:$QTDIR/lib:/usr/X11R6/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH
-NLS_LANG="SIMPLIFIED CHINESE_CHINA.UTF8"
-export NLS_LANG
-TNS_ADMIN="/CPS_Project/ubuntu/etc"
+
 export TNS_ADMIN
 AUDIOSERVER=`hostname`:0.0
 export AUDIOSERVER
 
-#export CVSROOT=:ext:lijunda@172.28.111.208:/home/yfgzk
-export CVSROOT=:ssh;key='.ssh/lijunda_private.ppk':lijunda@172.28.111.208:/home/yfgzk
-export CVS_RSH=ssh
-export CPS_PROJECT20
-
-#Add for Oracle DB 
-export ORACLE_SID=orcl
-export NLS_LANG="SIMPLIFIED CHINESE_CHINA.UTF8"
-export ORACLE_BASE=/usr/local/oracle/app/oracle
-export ORACLE_HOME=$ORACLE_BASE/product/11.2.0/dbhome_1
-export PATH=$PATH:$ORACLE_HOME/bin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lib 
-
-export NLS_LANG="SIMPLIFIED CHINESE_CHINA.UTF8"
-
-cd /CPS_Project/ubuntu/bin
 
